@@ -8,13 +8,15 @@ This project uses SASS for styling and can be run locally with live reloading fo
 
 Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on your system. This will include npm, which is needed to install the project dependencies.
 
-## Setup
+## Running the project
+
+### 1. Initial setup
 
 First, clone the repository and navigate into the project directory,then install the necessary dependencies:
 
 `npm install`
 
-## Running the SASS Compiler
+### 2. Running the SASS Compiler
 
 This project uses SASS for styling. To compile SASS to CSS and watch for changes run the following command in a terminal:
 
@@ -22,7 +24,7 @@ This project uses SASS for styling. To compile SASS to CSS and watch for changes
 
 This will watch your SASS files for any changes and automatically compile them to CSS.
 
-## Running the Project with Live-Server
+### 3. Detecting changes with Live-Server
 
 To see your changes in real-time, you can use live-server, a simple development server with live reload capability.
 
