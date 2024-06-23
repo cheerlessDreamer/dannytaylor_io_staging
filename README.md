@@ -1,6 +1,6 @@
 # Danny Taylor - personal portfolio
 
-This README serves as the documentation for the staging version of Danny Taylor's personal portfolio. The staging version is automatically [published](www.staging.dannytaylor.io) using GitHub Pages.
+This README serves as the documentation for the staging version of Danny Taylor's personal portfolio. The staging version is automatically [published](https://www.staging.dannytaylor.io) using GitHub Pages.
 
 This project uses SASS for styling and can be run locally with live reloading for a seamless development experience. Follow the instructions below to get started.
 
