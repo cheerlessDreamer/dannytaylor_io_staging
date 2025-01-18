@@ -37,3 +37,9 @@ Then, to start the server and open your project in the browser, run:
 `live-server`
 
 This will automatically open your default web browser and serve your project. Any changes to HTML, CSS, or JavaScript files will trigger a live reload of the page.
+
+If you wish to test in a different browser, you can pass a `--browser` argument:
+
+`live-server --browser=chrome`
+
+`live-server --browser=safari`
