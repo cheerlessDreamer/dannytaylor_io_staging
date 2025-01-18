@@ -970,17 +970,6 @@ main picture img {
     margin-top: -4rem;
   }
 }
-.work::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.15;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url("../images/noise.svg");
-  background-repeat: repeat;
-  mix-blend-mode: soft-light;
-}
 
 .work-content {
   width: 100%;

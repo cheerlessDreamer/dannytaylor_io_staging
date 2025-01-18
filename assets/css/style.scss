@@ -204,17 +204,6 @@ main picture img {
     @media (min-width: 900px) {
         margin-top: -4rem;
     }
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        opacity: 0.15; // Adjust this value to control noise intensity
-        z-index: -1;
-        pointer-events: none;
-        background-image: url('../images/noise.svg'); // Path to your fffuel SVG
-        background-repeat: repeat;
-        mix-blend-mode: soft-light; // Try different blend modes like overlay, multiply, etc.
-    }
 }
 
 // Add a new class for the work section content
