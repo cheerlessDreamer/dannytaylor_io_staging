@@ -8,10 +8,10 @@ const textList = [
     "aspiring ceramicist",
     "sewing student",
     "good listener",
-    "INTJ",
-    "straight talker",
+    "straight-talker",
     "opinionated introvert",
     "night owl",
+    "side-project hoarder",
 ];
 
 const icon = "<i class='ph-bold ph-arrows-clockwise'></i>";

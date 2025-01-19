@@ -486,6 +486,14 @@ main picture img {
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.2s ease;
+        h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+            color: var(--primary-color);
+        }
         .theme-option {
             background: none;
             border: none;
@@ -604,6 +612,14 @@ main picture img {
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.2s ease;
+        h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+            color: var(--primary-color);
+        }
         .project-option {
             color: var(--primary-color);
             text-decoration: none;

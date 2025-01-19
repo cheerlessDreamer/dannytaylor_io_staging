@@ -1249,6 +1249,14 @@ main picture img {
   transform: translateY(-10px);
   transition: all 0.2s ease;
 }
+.theme-selector .theme-dropdown h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  color: var(--primary-color);
+}
 .theme-selector .theme-dropdown .theme-option {
   background: none;
   border: none;
@@ -1364,6 +1372,14 @@ main picture img {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
+}
+.projects-selector .projects-dropdown h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  color: var(--primary-color);
 }
 .projects-selector .projects-dropdown .project-option {
   color: var(--primary-color);
