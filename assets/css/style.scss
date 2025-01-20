@@ -442,6 +442,8 @@ main picture img {
     video {
         width: 100%;
         height: auto;
+        border-radius: 1rem;
+        overflow: hidden;
     }
 }
 

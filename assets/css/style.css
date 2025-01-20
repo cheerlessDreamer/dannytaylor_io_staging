@@ -1204,6 +1204,8 @@ main picture img {
 .project-media video {
   width: 100%;
   height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .project-media-item {
