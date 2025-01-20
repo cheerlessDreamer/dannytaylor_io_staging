@@ -73,6 +73,27 @@ function applyTheme(palette) {
     console.info(
         `The selected colour theme is based on '${palette.name}' by Fleetwood Mac.`
     );
+
+    // Set selection color
+    const style = document.createElement('style');
+    style.textContent = `
+        ::selection {
+            background-color: ${palette.accent};
+            color: ${palette.primary};
+        }
+    `;
+
+    // Remove any previous selection styles
+    const oldStyle = document.querySelector('style[data-selection-style]');
+    if (oldStyle) {
+        oldStyle.remove();
+    }
+
+    // Add data attribute to identify this style element
+    style.setAttribute('data-selection-style', '');
+    document.head.appendChild(style);
+
+    localStorage.setItem('theme', palette.name);
 }
 
 // Set initial random theme
