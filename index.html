@@ -71,7 +71,11 @@ If you're curious about how this site was built or want to work together, drop m
             }, e.__SV = 1)
         }(document, window.posthog || []);
         posthog.init('phc_YiMxofytWREj19MjI8euBUYPeKtAZ9ylCLlaePzhOSM', {
-            api_host: 'https://eu.i.posthog.com'
+            api_host: 'https://eu.i.posthog.com',
+            persistence: 'memory',
+            bootstrap: { // optional
+                distinctID: 'user distinct id',
+            },
         })
     </script>
 
