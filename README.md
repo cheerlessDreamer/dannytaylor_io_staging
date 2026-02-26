@@ -43,3 +43,23 @@ If you wish to test in a different browser, you can pass a `--browser` argument:
 `live-server --browser=chrome`
 
 `live-server --browser=safari`
+
+## Deployment
+
+When you're satisfied with the staging version, deploy to production by pushing to the main repo.
+
+### First-time setup
+
+Add the production repo as a remote (only needed once):
+
+`git remote add production https://github.com/cheerlessDreamer/dannytaylor_io.git`
+
+### Deploying
+
+Force push to production:
+
+`git push production main --force`
+
+### Post-deploy: GitHub Pages custom domain
+
+After force pushing, GitHub resets the GitHub Pages URL to a regular GitHub branded one. You'll need to manually go into the **dannytaylor_io** repo's GitHub Pages settings and re-apply the custom domain (`dannytaylor.io`).
