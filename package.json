@@ -1,0 +1,22 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch assets/css/style.scss assets/css/style.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "aos": "^2.3.4",
+        "sass": "^1.77.5"
+    },
+    "devDependencies": {
+        "stylelint": "^16.13.2",
+        "stylelint-config-recommended-scss": "^14.1.0",
+        "stylelint-scss": "^6.10.1"
+    }
+}
