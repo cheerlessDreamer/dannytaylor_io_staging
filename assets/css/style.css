@@ -833,6 +833,10 @@ h3,
   font-weight: 200;
 }
 
+.contact {
+  line-height: 1.5;
+}
+
 .link {
   color: inherit;
   text-decoration: underline;
@@ -1117,6 +1121,11 @@ main {
   min-height: 100vh;
   max-height: 1000px;
   padding-top: 0;
+}
+@media (max-width: 768px) {
+  main {
+    padding-top: 5rem;
+  }
 }
 @media (min-width: 1200px) {
   main {
