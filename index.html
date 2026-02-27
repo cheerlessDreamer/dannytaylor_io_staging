@@ -51,6 +51,7 @@ If you're curious about how this site was built or want to work together, drop m
 </head>
 
 <body>
+    <div class="content-card">
     <header data-aos="fade-down">
         <div class="nav-header">
             <h1 class="logo">Danny Taylor</h1>
@@ -103,6 +104,14 @@ If you're curious about how this site was built or want to work together, drop m
         </div>
     </header>
 
+    <!-- Mobile-only header bar and fullscreen menu -->
+    <div class="mobile-header-bar" data-aos="fade-down">
+        <h1 class="logo">Danny Taylor</h1>
+        <button type="button" class="mobile-menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ph-bold ph-list"></i>
+        </button>
+    </div>
+
     <main>
         <div class="main-content" data-aos="fade-up" data-aos-delay="200">
             <article class="profile-pic">
@@ -118,8 +127,7 @@ If you're curious about how this site was built or want to work together, drop m
                 </picture>
             </article>
             <div class="text-stack">
-                <h2 class="main-text">I'm a <span class="designer">lead designer/junior
-                        developer</span> and
+                <h2 class="main-text">I'm a <span class="designer">designer/developer</span> and
                     <span id="hobby" class="link">recovering vanlife enthusiast</span> based in Sweden with <span class="designer">over a decade of experience</span> helping clients get out of their users’ way.
                 </h2>
                 <p class="contact"><a href="mailto:danny@dannytaylor.io" class="link">Contact me</a> if you'd like to work together.
@@ -143,7 +151,9 @@ If you're curious about how this site was built or want to work together, drop m
 
                     <div class="project-header">
                         <h3 class="project-title">Kaisa <span class="formerly">formerly Freespee</span></h3>
-                        <span class="project-date">Present</span>
+                        <div class="project-meta">
+                            <span class="project-role">Product Designer, present</span>
+                        </div>
                     </div>
 
                 </div>
@@ -183,7 +193,9 @@ If you're curious about how this site was built or want to work together, drop m
                         </svg> </div>
                     <div class="project-header">
                         <h3 class="project-title">Cytiva <span class="formerly">formerly GE Healthcare</span></h3>
-                        <span class="project-date">August 2020 – June 2022</span>
+                        <div class="project-meta">
+                            <span class="project-role">Product Designer, August 2020 – June 2022</span>
+                        </div>
                     </div>
                 </div>
 
@@ -219,7 +231,7 @@ If you're curious about how this site was built or want to work together, drop m
 
                 <div class="project-description">
                     <p><a href="https://www.cytivalifesciences.com" class="link">Cytiva<i class='ph-bold ph-arrow-up-right external-link-icon'></i></a> is advancing the development and manufacture of life-changing therapeutics with innovative tools and technologies
-                        that empower the biopharma industry.
+                        that empower the biopharma industry.</p>
                 </div>
             </article>
 
@@ -233,7 +245,9 @@ If you're curious about how this site was built or want to work together, drop m
                     </div>
                     <div class="project-header">
                         <h3 class="project-title">Husqvarna</h3>
-                        <span class="project-date">April 2019 – June 2020</span>
+                        <div class="project-meta">
+                            <span class="project-role">Product Designer, April 2019 – June 2020</span>
+                        </div>
                     </div>
                 </div>
 
@@ -261,7 +275,7 @@ If you're curious about how this site was built or want to work together, drop m
 
                 <div class="project-description">
                     <p><a href="https://www.husqvarna.com/se/" class="link">Husqvarna<i class='ph-bold ph-arrow-up-right external-link-icon'></i></a> craft innovative tools and solutions that empower professionals and homeowners to shape and maintain outdoor
-                        spaces with precision and ease.
+                        spaces with precision and ease.</p>
                 </div>
             </article>
 
@@ -318,6 +332,63 @@ If you're curious about how this site was built or want to work together, drop m
 
         </div>
     </section>
+    </div><!-- .content-card -->
+
+    <div id="mobile-menu" class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <button type="button" class="mobile-menu-close" aria-label="Close menu">
+            <i class="ph-bold ph-x"></i>
+        </button>
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="#work">Work</a>
+                <a href="/assets/other/DannyTaylorWebCV.pdf">CV</a>
+                <a href="mailto:danny@dannytaylor.io">Contact</a>
+            </nav>
+            <div class="mobile-menu-dropdown">
+                <button type="button" class="mobile-menu-dropdown-trigger" aria-expanded="false" aria-controls="mobile-dropdown-projects" id="mobile-dropdown-projects-trigger">
+                    <span>Side projects</span>
+                    <i class="ph-bold ph-caret-down mobile-menu-dropdown-icon"></i>
+                </button>
+                <div id="mobile-dropdown-projects" class="mobile-menu-dropdown-content" aria-hidden="true">
+                    <a href="https://bookshelf.dannytaylor.io/" class="mobile-project-link" target="_blank" rel="noopener noreferrer">
+                    Bookshelf<br>
+                    <span class="side-project-description">Some books I physically own</span>
+                </a>
+                <a href="https://ellips.app" class="mobile-project-link" target="_blank" rel="noopener noreferrer">
+                    Ellips<br>
+                    <span class="side-project-description">Generative art</span>
+                </a>
+                <a href="https://www.instagram.com/unlikely_barn_finds/" class="mobile-project-link" target="_blank" rel="noopener noreferrer">
+                    Unlikely Barn Finds<br>
+                    <span class="side-project-description">Fun with Midjourney</span>
+                </a>
+                <a href="https://cmdctrl.club/" class="mobile-project-link" target="_blank" rel="noopener noreferrer">
+                    CMD + CTRL Club<br>
+                    <span class="side-project-description">Discover Mac keyboard shortcuts</span>
+                </a>
+                <a href="https://senecasays.club/" class="mobile-project-link" target="_blank" rel="noopener noreferrer">
+                    Seneca Says&hellip;<br>
+                    <span class="side-project-description">Ancient wisdom for modern times</span>
+                </a>
+                </div>
+            </div>
+            <div class="mobile-menu-dropdown">
+                <button type="button" class="mobile-menu-dropdown-trigger" aria-expanded="false" aria-controls="mobile-dropdown-theme" id="mobile-dropdown-theme-trigger">
+                    <span>Theme</span>
+                    <i class="ph-bold ph-caret-down mobile-menu-dropdown-icon"></i>
+                </button>
+                <div id="mobile-dropdown-theme" class="mobile-menu-dropdown-content" aria-hidden="true">
+                <div class="mobile-theme-options">
+                    <button type="button" class="theme-option" data-theme="Rhiannon">Rhiannon</button>
+                    <button type="button" class="theme-option" data-theme="Emerald Eyes">Emerald Eyes</button>
+                    <button type="button" class="theme-option" data-theme="Black Magic Woman">Black Magic Woman</button>
+                    <button type="button" class="theme-option" data-theme="Gold Dust Woman">Gold Dust Woman</button>
+                    <button type="button" class="theme-option" data-theme="Landslide">Landslide</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="outro">
         <p class="status">
@@ -331,6 +402,8 @@ If you're curious about how this site was built or want to work together, drop m
 
     <script src="assets/js/updateHobby.js"></script>
     <script src="assets/js/blinkImage.js"></script>
+    <script src="assets/js/cardEffect.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
 
     <script>
         AOS.init({

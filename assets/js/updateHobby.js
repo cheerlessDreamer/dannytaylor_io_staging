@@ -11,6 +11,7 @@ const textList = [
     "good listener",
     "straight-talker",
     "night owl",
+    "tea drinker",
     "side-project hoarder",
 ];
 
