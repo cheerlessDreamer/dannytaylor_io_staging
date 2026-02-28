@@ -4,13 +4,13 @@ $aos-distance: 40px;
 $accent: #bada55;
 $secondary: #FFF;
 $primary: #000;
-
 // Theme CSS variables (defaults; JS updates these on load)
 :root {
     --primary-color: #{$primary};
     --secondary-color: #{$secondary};
     --accent-color: #{$accent};
 }
+
 $main-margin: 48px;
 $main-gap: 80px;
 $main-padding-top: 80px;
@@ -30,7 +30,8 @@ body {
         transition: none;
     }
     padding: 0;
-    font-family: 'Host Grotesk', sans-serif;
+    font-family: 'Host Grotesk',
+    sans-serif;
     min-height: 100vh;
     max-height: 1000px;
     display: flex;
@@ -310,12 +311,14 @@ header {
     }
 }
 
-.mobile-menu-dropdown-trigger[aria-expanded="true"] + .mobile-menu-dropdown-content {
+.mobile-menu-dropdown-trigger[aria-expanded="true"]+.mobile-menu-dropdown-content {
     max-height: 500px;
 }
 
 .mobile-project-link {
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
     color: var(--secondary-color);
     text-decoration: none;
     padding: 0.75rem 1rem;
@@ -910,6 +913,7 @@ main picture img {
         position: absolute;
         top: 100%;
         right: 0;
+        min-width: 320px;
         background: var(--secondary-color);
         border-radius: 0.5rem;
         padding: 0.5rem;
@@ -934,8 +938,10 @@ main picture img {
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
-            white-space: nowrap;
             font-size: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
             &:hover {
                 background: var(--primary-color);
                 color: var(--secondary-color);
@@ -952,7 +958,29 @@ main picture img {
     }
 }
 
+.side-project-text {
+    display: block;
+}
+
 .side-project-description {
     font-size: 0.8em;
     opacity: 0.7;
+}
+
+// Side project icons
+.side-project-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 3px solid var(--primary-color);
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
 }
