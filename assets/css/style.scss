@@ -4,6 +4,13 @@ $aos-distance: 40px;
 $accent: #bada55;
 $secondary: #FFF;
 $primary: #000;
+
+// Theme CSS variables (defaults; JS updates these on load)
+:root {
+    --primary-color: #{$primary};
+    --secondary-color: #{$secondary};
+    --accent-color: #{$accent};
+}
 $main-margin: 48px;
 $main-gap: 80px;
 $main-padding-top: 80px;
@@ -16,8 +23,12 @@ html {
 }
 
 body {
-    background-color: $primary;
-    color: $secondary;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 300ms ease, color 300ms ease;
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
     padding: 0;
     font-family: 'Host Grotesk', sans-serif;
     min-height: 100vh;
@@ -186,7 +197,10 @@ header {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
+    transition: background-color 300ms ease, color 300ms ease, opacity 0.2s ease, visibility 0.2s ease;
+    @media (prefers-reduced-motion: reduce) {
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
     @media (prefers-reduced-motion: reduce) {
         transition: none;
     }
@@ -429,6 +443,10 @@ main picture img {
     background-color: var(--secondary-color);
     width: 100%;
     color: var(--primary-color) !important;
+    transition: background-color 300ms ease, color 300ms ease;
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
     align-items: center;
     padding-top: 8rem;
     margin-top: 0;
@@ -594,6 +612,10 @@ main picture img {
     min-height: 40vh;
     padding: 4rem 2rem;
     background-color: var(--primary-color);
+    transition: background-color 300ms ease;
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
     margin-top: 0;
     border-radius: 0;
     text-align: center;

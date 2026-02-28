@@ -765,13 +765,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   transform: perspective(2500px) rotateX(0);
 }
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #FFF;
+  --accent-color: #bada55;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #000;
-  color: #FFF;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background-color 300ms ease, color 300ms ease;
   padding: 0;
   font-family: "Host Grotesk", sans-serif;
   min-height: 100vh;
@@ -781,6 +788,11 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 .content-card {
@@ -944,7 +956,12 @@ header {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition: background-color 300ms ease, color 300ms ease, opacity 0.2s ease, visibility 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-overlay {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu-overlay {
@@ -1201,10 +1218,16 @@ main picture img {
   background-color: var(--secondary-color);
   width: 100%;
   color: var(--primary-color) !important;
+  transition: background-color 300ms ease, color 300ms ease;
   align-items: center;
   padding-top: 8rem;
   margin-top: 0;
   border-radius: 1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .work {
+    transition: none;
+  }
 }
 @media (min-width: 900px) {
   .work {
@@ -1368,9 +1391,15 @@ main picture img {
   min-height: 40vh;
   padding: 4rem 2rem;
   background-color: var(--primary-color);
+  transition: background-color 300ms ease;
   margin-top: 0;
   border-radius: 0;
   text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .outro {
+    transition: none;
+  }
 }
 .outro p {
   font-size: 1.5rem;
@@ -1699,5 +1728,3 @@ main picture img {
   font-size: 0.8em;
   opacity: 0.7;
 }
-
-/*# sourceMappingURL=style.css.map */

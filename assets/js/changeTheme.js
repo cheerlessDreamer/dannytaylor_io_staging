@@ -65,8 +65,6 @@ function applyTheme(palette) {
     document.documentElement.style.setProperty("--primary-color", palette.primary);
     document.documentElement.style.setProperty("--secondary-color", palette.secondary);
     document.documentElement.style.setProperty("--accent-color", palette.accent);
-    document.body.style.backgroundColor = palette.primary;
-    document.body.style.color = palette.secondary;
 
     updateSelectedTheme(palette.name);
 
