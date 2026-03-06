@@ -1560,7 +1560,8 @@ main picture img {
   position: absolute;
   top: 100%;
   right: 0;
-  background: var(--secondary-color);
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -1579,12 +1580,12 @@ main picture img {
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .theme-selector .theme-dropdown .theme-option {
   background: none;
   border: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-align: left;
@@ -1593,8 +1594,8 @@ main picture img {
   white-space: nowrap;
 }
 .theme-selector .theme-dropdown .theme-option:hover {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 .theme-selector:hover .theme-dropdown {
   opacity: 1;
@@ -1686,7 +1687,8 @@ main picture img {
   top: 100%;
   right: 0;
   min-width: 320px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -1704,10 +1706,10 @@ main picture img {
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .projects-selector .projects-dropdown .project-option {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -1717,8 +1719,8 @@ main picture img {
   gap: 0.75rem;
 }
 .projects-selector .projects-dropdown .project-option:hover {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 .projects-selector:hover .projects-dropdown {
   opacity: 1;
@@ -1743,7 +1745,7 @@ main picture img {
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--secondary-color);
   overflow: hidden;
   display: block;
   box-sizing: border-box;
