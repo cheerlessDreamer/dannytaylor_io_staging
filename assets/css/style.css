@@ -1808,6 +1808,9 @@ main picture img {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
 }
 .projects-selector .projects-button:hover {
   color: var(--accent-color);
