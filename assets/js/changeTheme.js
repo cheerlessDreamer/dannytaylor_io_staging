@@ -68,9 +68,6 @@ function applyTheme(palette) {
 
     updateSelectedTheme(palette.name);
 
-    console.info(
-        `The selected colour theme is based on '${palette.name}' by Fleetwood Mac.`
-    );
 
     // Set selection color
     const style = document.createElement('style');

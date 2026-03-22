@@ -823,19 +823,19 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 200;
   line-height: 1.35;
   margin: 0;
 }
 @media (max-width: 900px) {
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 576px) {
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -1385,13 +1385,8 @@ main picture img {
 }
 
 .outro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   z-index: 10;
-  min-height: 40vh;
-  padding: 4rem 2rem;
+  overflow-x: clip;
   background-color: var(--primary-color);
   transition: background-color 300ms ease;
   margin-top: 0;
@@ -1757,4 +1752,320 @@ main picture img {
   display: block;
 }
 
-/*# sourceMappingURL=style.css.map */
+.personal-projects {
+  width: 100%;
+  padding: 2rem 0 4rem;
+  color: var(--primary-color);
+}
+
+.personal-projects-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  opacity: 0.5;
+  margin: 0 0 2rem;
+  padding: 0 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1rem 12.5%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    scroll-behavior: auto;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-track {
+    padding: 1rem 8%;
+  }
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 75%;
+  scroll-snap-align: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  opacity: 0.25;
+  color: var(--primary-color);
+  transition: opacity 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-card {
+    transition: none;
+    opacity: 1;
+  }
+}
+.carousel-card.is-active {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 84%;
+    padding: 1.5rem;
+  }
+}
+
+.carousel-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.carousel-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.carousel-card-icon i {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.carousel-card-title {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.carousel-card-desc {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.carousel-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  align-self: flex-start;
+}
+.carousel-card-link:hover span {
+  text-decoration-color: var(--accent-color);
+}
+.carousel-card-link:hover i {
+  color: var(--accent-color);
+}
+.carousel-card-link span {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.3em;
+}
+.carousel-card-link i {
+  font-size: 0.85em;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-prev,
+.carousel-next {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-prev,
+  .carousel-next {
+    transition: none;
+  }
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.25;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-dot {
+    transition: none;
+  }
+}
+.carousel-dot.is-active {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.site-meta-trigger {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-top: 2rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: opacity 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-meta-trigger {
+    transition: none;
+  }
+}
+.site-meta-trigger:hover {
+  opacity: 0.9;
+}
+.site-meta-trigger span {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.4em;
+}
+
+.outro-panels {
+  display: flex;
+  width: 200%;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .outro-panels {
+    transition: none;
+  }
+}
+
+.outro-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.outro.is-meta .outro-panels {
+  transform: translateX(-50%);
+}
+
+.site-meta-back {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 2rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: opacity 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-meta-back {
+    transition: none;
+  }
+}
+.site-meta-back:hover {
+  opacity: 0.9;
+}
+.site-meta-back span {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.4em;
+}
+
+.site-meta {
+  max-width: 52ch;
+  text-align: center;
+}
+.site-meta p {
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.75;
+  max-width: none;
+  margin: 0 0 1em;
+  opacity: 0.8;
+}
+.site-meta p:last-child {
+  margin-bottom: 0;
+}
+.site-meta code {
+  font-family: monospace;
+  font-size: 0.9em;
+}
