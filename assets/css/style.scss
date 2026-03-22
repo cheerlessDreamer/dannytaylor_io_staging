@@ -1291,13 +1291,16 @@ main picture img {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
     @media (prefers-reduced-motion: reduce) {
         transition: none;
     }
     &:hover {
         background: var(--primary-color);
         color: var(--secondary-color);
+    }
+    &:active {
+        transform: scale(0.96);
     }
 }
 
@@ -1348,12 +1351,15 @@ main picture img {
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.1s ease;
     @media (prefers-reduced-motion: reduce) {
         transition: none;
     }
     &:hover {
         opacity: 0.9;
+    }
+    &:active {
+        transform: scale(0.96);
     }
     span {
         text-decoration: underline;

@@ -2061,7 +2061,7 @@ main picture img {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-prev,
@@ -2073,6 +2073,10 @@ main picture img {
 .carousel-next:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
+}
+.carousel-prev:active,
+.carousel-next:active {
+  transform: scale(0.96);
 }
 
 .carousel-dots {
@@ -2121,7 +2125,7 @@ main picture img {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .site-meta-trigger {
@@ -2130,6 +2134,9 @@ main picture img {
 }
 .site-meta-trigger:hover {
   opacity: 0.9;
+}
+.site-meta-trigger:active {
+  transform: scale(0.96);
 }
 .site-meta-trigger span {
   text-decoration: underline;
