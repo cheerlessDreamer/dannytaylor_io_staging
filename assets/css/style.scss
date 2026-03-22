@@ -582,6 +582,7 @@ main picture img {
         font-weight: 200;
         margin: 0;
         margin-bottom: 2rem;
+        text-wrap: pretty;
         .external-link-icon {
             font-size: 0.8em;
             vertical-align: middle;
@@ -641,6 +642,7 @@ main picture img {
         font-weight: 200;
         max-width: 32ch;
         margin: 0 auto;
+        text-wrap: pretty;
     }
     .social-link {
         display: inline-flex;
@@ -845,6 +847,7 @@ main picture img {
             line-height: 1.7;
             font-weight: 200;
             margin: 0 0 1rem;
+            text-wrap: pretty;
             &:last-child {
                 margin-bottom: 0;
             }
