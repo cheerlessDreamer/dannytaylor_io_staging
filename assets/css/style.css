@@ -1991,6 +1991,13 @@ main picture img {
   flex: 1;
 }
 
+.carousel-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-self: flex-start;
+}
+
 .carousel-card-link {
   display: inline-flex;
   align-items: center;
