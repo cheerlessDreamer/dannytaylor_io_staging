@@ -2089,7 +2089,10 @@ main picture img {
   opacity: 0.25;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 10px;
+  margin: -10px;
+  background-clip: content-box;
+  box-sizing: content-box;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) {
