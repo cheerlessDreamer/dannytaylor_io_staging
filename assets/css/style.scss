@@ -151,6 +151,9 @@ header {
 .nav-links a {
     color: var(--secondary-color);
     font-size: 1.5rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -904,6 +907,9 @@ main picture img {
         font-size: 1.5rem;
         display: flex;
         align-items: center;
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
         &:hover {
             color: var(--accent-color);
         }
