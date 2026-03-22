@@ -1,0 +1,35 @@
+<button class="case-study-back-btn" type="button">
+    <i class="ph-bold ph-arrow-left"></i> <span>Back</span>
+</button>
+<div class="case-study-main">
+    <div class="case-study-hero">
+        <h2>BeepOff — AI Receptionist</h2>
+        <div class="project-info">
+            <p>Side project · Role: Designer, developer, everything · Timeline: 2025–present</p>
+        </div>
+        <img class="case-study-img" src="https://placehold.co/1600x900/1a1a2e/e0e0e0?text=BeepOff+Dashboard" alt="BeepOff application dashboard" loading="lazy">
+    </div>
+    <div class="case-study-section">
+        <h4>The Problem</h4>
+        <p>Hair salons are busy places. Stylists start their day with gloved hands full of bleach chemicals and a phone that won't stop ringing. Built for a specific salon — Andrew and Maxine's — but the problem is universal: a single-branch salon with a few staff, a Phorest setup, and no dedicated receptionist. There are only two major salon software players, and Andrew and Maxine know scores of friends in the same situation.</p>
+    </div>
+    <div class="case-study-section">
+        <h4>My Approach</h4>
+        <p>I started with Lovable to build a static landing page — just to test interest and get something out there. The initial version was generous with "coming soon!" messaging. When it came to building the actual product, I used Vapi for voice AI, ElevenLabs for voice synthesis, Twilio for telephony, n8n for workflow orchestration, and integrated with the Phorest salon management API.</p>
+        <p>It worked manually very well — I could instantiate a new assistant — but provisioning telephone numbers, generating system prompts, and managing configurations wasn't scalable. I showed it to Andrew during one of our regular meetings, just as a sidenote because I thought it was interesting. He immediately asked whether he could use it at the salon and mentioned that Phorest had an API.</p>
+        <p>I used n8n specifically because I could see what was happening in real-time during testing — which workflows were failing, which were working, the value of variables throughout the process. I used Claude to help iron out bugs as well.</p>
+    </div>
+    <div class="case-study-section">
+        <h4>The Solution</h4>
+        <p>A full SaaS application built with Lovable where salon owners sign up, choose a plan, and go through a short onboarding: Phorest details, salon information like opening hours, initial greetings, and voice selection. A workflow then provisions a local telephone number from Twilio, which gets stored in the database. The salon can immediately call the number to test the service — hearing things like the salon's name, the caller's name (if Phorest is linked), and answering questions about opening hours and appointments.</p>
+    </div>
+    <img class="case-study-img" src="https://placehold.co/1600x900/1a1a2e/e0e0e0?text=Onboarding+Flow" alt="BeepOff onboarding flow" loading="lazy">
+    <div class="case-study-section">
+        <h4>Impact</h4>
+        <p>Maxine describes BeepOff as simply "part of the salon" now. Callers know who the AI is. The stylists love having a less stressful start to their day since they don't have to deal with the phones for a couple of hours. One paying customer so far, with a network of similar salons ready to expand to — I've held off sharing wider because I'm still too critical of it.</p>
+    </div>
+    <div class="case-study-section">
+        <h4>What I Learned</h4>
+        <p>Vendor API documentation quality varies wildly. Vapi's API changed frequently, meaning I had to manually find the latest docs and examples. Phorest's documentation was sparse. The gap between "works manually" and "works at scale" is where most of the real engineering happens — provisioning, error handling, edge cases. And showing a side project casually to the right person is sometimes how real products are born.</p>
+    </div>
+</div>

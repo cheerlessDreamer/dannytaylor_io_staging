@@ -5,7 +5,10 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "sass --watch assets/css/style.scss assets/css/style.css"
+        "sass": "sass --watch assets/css/style.scss assets/css/style.css",
+        "sass:build": "npx sass assets/css/style.scss assets/css/style.css --no-source-map",
+        "sync-404": "cp index.html 404.html",
+        "build": "npm run sass:build && npm run sync-404"
     },
     "keywords": [],
     "author": "",

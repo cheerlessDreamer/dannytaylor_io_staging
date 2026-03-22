@@ -905,6 +905,10 @@ header {
   text-decoration-color: var(--accent-color);
 }
 
+.nav-text-trigger {
+  cursor: pointer;
+}
+
 .mobile-header-bar {
   display: none;
   position: absolute;
@@ -1500,6 +1504,120 @@ main picture img {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 200;
+}
+
+.case-study-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 300ms ease, color 300ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-study-overlay {
+    transition: none;
+  }
+}
+.case-study-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.case-study-overlay .case-study-back-btn {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  padding: 1.5rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: opacity 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-study-overlay .case-study-back-btn {
+    transition: none;
+  }
+}
+.case-study-overlay .case-study-back-btn:hover {
+  opacity: 0.9;
+}
+.case-study-overlay .case-study-back-btn span {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.4em;
+}
+.case-study-overlay .case-study-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+.case-study-overlay .case-study-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1.5rem 0 3rem;
+  display: block;
+}
+.case-study-overlay .case-study-hero {
+  margin-bottom: 3rem;
+}
+.case-study-overlay .case-study-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin: 0 0 1rem;
+}
+@media (max-width: 576px) {
+  .case-study-overlay .case-study-hero h2 {
+    font-size: 1.6rem;
+  }
+}
+.case-study-overlay .case-study-hero .project-info p {
+  font-size: 1rem;
+  opacity: 0.6;
+  font-weight: 400;
+  margin: 0;
+}
+.case-study-overlay .case-study-section {
+  margin-bottom: 3rem;
+}
+.case-study-overlay .case-study-section h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  opacity: 0.5;
+}
+.case-study-overlay .case-study-section p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-weight: 200;
+  margin: 0 0 1rem;
+}
+.case-study-overlay .case-study-section p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  .case-study-overlay .case-study-section p {
+    font-size: 1.1rem;
+  }
+}
+.case-study-overlay .case-study-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
