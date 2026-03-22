@@ -1702,7 +1702,7 @@ main picture img {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: all 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 .theme-selector .theme-dropdown h4 {
   font-size: 1rem;
@@ -1828,7 +1828,7 @@ main picture img {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: all 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 .projects-selector .projects-dropdown h4 {
   font-size: 1rem;

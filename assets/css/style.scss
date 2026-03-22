@@ -930,7 +930,7 @@ main picture img {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
         h4 {
             font-size: 1rem;
             text-transform: uppercase;
@@ -1058,7 +1058,7 @@ main picture img {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
         h4 {
             font-size: 1rem;
             text-transform: uppercase;
