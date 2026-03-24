@@ -5,7 +5,7 @@
     <div class="case-study-hero">
         <h2>Kaisa — Audience Builder</h2>
         <div class="project-info">
-            <p>Company: Kaisa (formerly Freespee) · Role: Product Designer · Timeline: 2024–present</p>
+            <p>Company: Kaisa (formerly Freespee) · Role: Lead Product Designer · Timeline: June 2022–present</p>
         </div>
         <img class="case-study-img" src="https://placehold.co/1600x900/1a1a2e/e0e0e0?text=Audience+Builder+UI" alt="Kaisa Audience Builder interface" loading="lazy">
     </div>
@@ -21,7 +21,9 @@
     </div>
     <div class="case-study-section">
         <h4>The Solution</h4>
-        <p>A phased release plan with a v1 that balanced the minimum requirements with future extensibility. The first release included the core segmentation logic and a clean interface for building audiences, while deferring the more complex features (like temporal analysis) to subsequent releases with clearly documented prerequisites.</p>
+        <p>A v1 Audience Builder that deliberately doesn't do everything — but is designed so that adding things later is easy.</p>
+        <p>The interface is intentionally sparse. The core of it is a form that supports nested criteria groups, even though we currently have no reason to nest anything. That structure is there for when we do. Similarly, every input that presents a list of options uses a combobox — a dropdown with a search field at the top — rather than a plain dropdown. A plain dropdown works fine with ten options; it breaks down at thirty. Designing for the current list would have meant a rework the moment the list grew, so I skipped that version entirely.</p>
+        <p>These decisions compound: because the components already accommodate more complexity, the next engineer to add a feature probably won't need to touch the design at all. That matters more than it sounds. A v1 that requires a designer to sign off on every increment tends to stay at v1 forever — the coordination cost is too high. This one is more likely to actually evolve.</p>
     </div>
     <img class="case-study-img" src="https://placehold.co/1600x900/1a1a2e/e0e0e0?text=Phased+Release+Plan" alt="Phased release plan overview" loading="lazy">
     <div class="case-study-section">
