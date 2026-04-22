@@ -211,3 +211,10 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,macos,gitTODOS.md
 .gstack/
+
+### Local tooling ###
+.agents/
+.claude/
+.goose/
+.windsurf/
+skills-lock.json
